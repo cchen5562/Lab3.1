@@ -5,9 +5,12 @@ public class ArrayMethods1
 	{
 		int m = 0;  //does m and n go inside or outside the loop?
 		int n = m + 1;
-		while(m > n)
+		while(m < list1.length)
 		{ 
+			if( > n) 
+			{
 			swap(list1, m, n);
+			}
 		} m++;
 	}
 	
@@ -21,7 +24,7 @@ public class ArrayMethods1
 		} x++;
 	}
 	
-	public static void insertionSort(int[] list1)
+	public static void insertionSort(int[] list1)   //while loop inside of a while loop needed
 	{
 		int i = 0;
 		int j = i + 1;
