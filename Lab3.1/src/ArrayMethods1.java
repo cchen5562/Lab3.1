@@ -7,7 +7,7 @@ public class ArrayMethods1
 		int n = m + 1;
 		while(m < list1.length)
 		{ 
-			if( > n) 
+			if(m > n) 
 			{
 			swap(list1, m, n);
 			}
