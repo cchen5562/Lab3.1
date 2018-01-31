@@ -3,25 +3,40 @@ public class ArrayMethods1
 {
 	public static void bubbleSort(String[] list1)
 	{
-		int m = 0;  //does m and n go inside or outside the loop?
-		int n = m + 1;
-		while(m < list1.length)
-		{ 
-			if(m > n) 
+			//while(swap > 0)
+			//swap = 0;
+			//start with the first two numbers and check if the first number is less than second
+			//if not, swap, swap++
+			//then move on to the next two consecutive numbers
+		int c = list1.length; //for the array loop
+		for(int a = 0; a < c - 1; a++)			//this one the one being checked
+		{
+			for(int b = 0; b < c - 1; b++)		//this is the temp place holder
 			{
-			swap(list1, m, n);
+				if (list1[b] > list1[b+1])
+				{
+					swap(list1, b, b + 1);
+				}
 			}
-		} m++;
+		} 
 	}
 	
 	public static void selectionSort(double[] list1)
 	{
-		int x = 0;
-		int y = x + 1;
-		while(x < y)
-		{ 
-			swap(list1, x, y);
-		} x++;
+		//first loop loops through index (length of array)
+		//second loop checks for the smallest number
+		//swap index if it checks against a smaller number
+		int z = list1.length;
+		for(int x = 0; x < z - 1; x++) 			//minus one because if it goes through the length it will be out of bounds
+		{
+			for(int y = 0; y < z - 1; y++)
+			{
+				if(list1[y] > list[y + 1])
+				{
+					swap(list1, y, y + 1);
+				} 
+			}
+		}
 	}
 	
 	public static void insertionSort(int[] list1)   //while loop inside of a while loop needed
